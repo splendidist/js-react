@@ -1,0 +1,14 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.header,
+.footer {
+  padding: 3rem;
+  text-align: center;
+}
+
+p:hover {
+  cursor: pointer;
+}
