@@ -24,16 +24,23 @@ export default function App() {
   function resetCounter() {
     setMyCounterState(0);
   }
+  //array of props
+  const numbers = [1, 2, 3, 4, 5];
+  const doubledNumbers = numbers.map((number) => number * 2);
 
   return (
     <div>
       {/* header component */}
       <Header />
-      {/* button with toggle */}
-      <button onClick={() => setIsVisible(!isVisible)}>Toggle</button>
+      <h2>Array of numbers</h2>
+      {doubledNumbers.map((item) => (
+        <li key={item}>{item}</li>
+      ))}
+      <h2>Button with Toggle</h2>
       {isVisible ? <p>True</p> : <p>False</p>}
-      {/* items list */}
-      <h1>Items</h1>
+      <button onClick={() => setIsVisible(!isVisible)}>Toggle</button>
+      <h2>List of items</h2>
+      <h3>Items</h3>
       <ul>
         {items.length ? (
           items.map((item) => <li key={item.id}>{item.title}</li>)
@@ -41,14 +48,15 @@ export default function App() {
           <li>No items</li> //this line makes it so '0' doesnt appear on the page if there are no array items
         )}
       </ul>
-      {/* counter button component */}
+      <h2>Counter Button</h2>
+      <h3>click the number of cookies to reset the count</h3>
       <Counter
         count={myCounterState}
         increment={incrementCounter}
         reset={resetCounter}
       />
-      {/* page content */}
-      <h2>Hello, world!</h2>
+      <h2>Page Content</h2>
+      <h3>Hello, world!</h3>
       <p>This is some text</p>
       <p>This text will update on the server without having to refresh</p>
       <img

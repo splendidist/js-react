@@ -3,6 +3,39 @@
   margin: 0px;
 }
 
+body {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  padding: 20px;
+  color: purple;
+}
+
+p {
+  padding: 10px;
+}
+
+button {
+  background-color: lightpink;
+  border: none;
+  padding: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+  color: white;
+}
+
+button:active {
+  color: black;
+}
+
+img {
+  margin-bottom: 50px;
+}
+
 .header,
 .footer {
   padding: 3rem;
